@@ -1,0 +1,52 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>配列</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/jquery-2.1.3.min.js"></script>
+<style>#main{margin:5px;padding: 5px; background: #666;color:#fff;}</style>
+</head>
+<body>
+<h1>配列</h1>
+<!-- ここに日時を表示させる -->
+<div id="view"></div>
+<!-- ここに日時を表示させる -->
+以下に入力してください<br>
+<!-- 文字を入力できるタグは、inputと -->
+<input type="text" id="test">
+<button id="aa">ボタンを押す</button>
+<div id="show"></div>
+
+
+<script>
+//記述練習
+
+// const menu= ["カレー","おでん","うどん","麻婆豆腐","猪鍋"];
+// for(let i =0; i<menu.length;i++){
+//     console.log(menu[i]);
+// };
+
+// $(document).ready(function(){
+//     let ram=Math.floor(Math.random()*menu.length);
+//     $('#test').click(function(){
+//         $('#resultAppetite').text(menu[ram]);
+//     });
+// });
+
+$('#aa').on('click',function(){
+    let vv = $('#test').val();
+    console.log(vv,'入力された文字');
+    if(vv==="あほ"){
+        $("#show").text("あほっていうな！");
+    } else {
+        $("#show").text("");
+    }
+    // 強制的にtestの中身を空にするため
+    $("#test").val("");
+})
+
+</script>
+</body>
+</html>
